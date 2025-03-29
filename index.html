@@ -1,53 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Página</title>
-    <style>
-        body {
-             background-color: #f4f4f4; 
-             text-align: center; 
-             font-family: 'Comic Sans MS', cursive, sans-serif;
-        }
-        h1 {
-            color: darkblue; 
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        button {
-            background-color: #ffcc00; 
-            border: none; 
-            padding: 10px 20px; 
-            font-size: 18px; 
-            font-weight: bold; 
-            border-radius: 10px; 
-            cursor: pointer; 
-            transition: 0.3s; 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venta Celulares</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
 
-        }
-        button:hover {
-            background-color: #ff9900;
-            color: white;
-        }
-    </style>
+    h1 {
+      color: #333;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    img {
+      width: 100%;
+      max-width: 600px;
+    }
+  </style>
 </head>
 <body>
-    <h1>¡Hola, esta es mi primera página!</h1>
-    <p>Hacé clic en el botón para ver un mensaje.</p>
-    <button onclick="mostrarMensaje()">Hacé clic</button>
-    <button onclick="cambiarColor()">Cambiar color de fondo</button>
 
-    <script>
-        function mostrarMensaje() {
-            alert("¡Hola! Hiciste clic en el botón.");
-}
-        function cambiarColor() {
-            let colores = ["lightblue", "lightgreen", "lightpink", "lightgray", "white"];
-            let colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
-            document.body.style.backgroundColor = colorAleatorio;
+  <h1>Bienvenidos a Venta Celulares</h1>
+  <p>Tenemos los mejores celulares a precios increíbles. ¡Explorá nuestra tienda!</p>
+  
+  <!-- Imagen de productos -->
+  <img src="https://link-de-tu-imagen.jpg" alt="Celulares" />
+  
+  <!-- Video de YouTube -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+  <!-- Redes sociales -->
+  <p>Síguenos en:</p>
+  <a href="https://www.instagram.com/tu-cuenta" target="_blank">Instagram</a><br>
+  <a href="https://www.facebook.com/tu-cuenta" target="_blank">Facebook</a>
+  
+  <!-- Botón -->
+  <button onclick="window.location.href='https://tu-tienda.com'">Visitar Tienda</button>
 
+  <!-- Formulario de contacto -->
+  <h2>Contacto</h2>
+  <form action="/enviar" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    <input type="submit" value="Enviar">
+  </form>
 
-        }
-    </script>
+  <!-- Contador -->
+  <button onclick="incrementarContador()">Haz clic</button>
+  <p id="contador">0</p>
+
+  <script>
+    let contador = 0;
+    function incrementarContador() {
+      contador++;
+      document.getElementById("contador").innerText = contador;
+    }
+  </script>
+
+  <!-- Mapa de Google -->
+  <iframe src="https://www.google.com/maps/embed?pb=YOUR_EMBED_LINK" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
 </body>
 </html>
