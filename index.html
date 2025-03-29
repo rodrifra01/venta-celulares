@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Página</title>
+    <style>
+        body {
+             background-color: #f4f4f4; 
+             text-align: center; 
+             font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        h1 {
+            color: darkblue; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        button {
+            background-color: #ffcc00; 
+            border: none; 
+            padding: 10px 20px; 
+            font-size: 18px; 
+            font-weight: bold; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            transition: 0.3s; 
+
+        }
+        button:hover {
+            background-color: #ff9900;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>¡Hola, esta es mi primera página!</h1>
+    <p>Hacé clic en el botón para ver un mensaje.</p>
+    <button onclick="mostrarMensaje()">Hacé clic</button>
+    <button onclick="cambiarColor()">Cambiar color de fondo</button>
+
+    <script>
+        function mostrarMensaje() {
+            alert("¡Hola! Hiciste clic en el botón.");
+}
+        function cambiarColor() {
+            let colores = ["lightblue", "lightgreen", "lightpink", "lightgray", "white"];
+            let colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+            document.body.style.backgroundColor = colorAleatorio;
+
+
+        }
+    </script>
+</body>
+</html>
